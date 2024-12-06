@@ -7,7 +7,10 @@ fn is_safe_sequence(vec_int: &[i32]) -> bool {
     let dec = vec_int[0] < vec_int[1];
     for i in 0..vec_int.len() - 1 {
         let diff = (vec_int[i] - vec_int[i + 1]).abs();
-        if (dec && vec_int[i] >= vec_int[i + 1]) || (!dec && vec_int[i] <= vec_int[i + 1]) || diff > 3 {
+        if (dec && vec_int[i] >= vec_int[i + 1])
+            || (!dec && vec_int[i] <= vec_int[i + 1])
+            || diff > 3
+        {
             return false;
         }
     }
